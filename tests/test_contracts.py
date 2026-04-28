@@ -92,6 +92,18 @@ def test_lane_decision_confidence_bounds_enforced():
         validate_contract("lane_decision", payload)
 
 
+def test_lane_decision_confidence_model_validation():
+    with pytest.raises(ValueError, match="confidence must be between 0.0 and 1.0"):
+        LaneDecision(confidence=-0.01)
+
+    with pytest.raises(ValueError, match="confidence must be between 0.0 and 1.0"):
+        LaneDecision(confidence=1.01)
+
+    assert LaneDecision(confidence=0.0).confidence == 0.0
+    assert LaneDecision(confidence=1.0).confidence == 1.0
+    assert LaneDecision(confidence=0.5).confidence == 0.5
+
+
 def test_schema_filenames_follow_documented_convention():
     expected = {
         "task_proposal.schema.json",
