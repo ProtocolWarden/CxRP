@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (C) 2026 Velascat
 import json
 from dataclasses import fields
 from pathlib import Path

@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# Copyright (C) 2026 Velascat
 from cxrp.contracts.common import ExecutionLimits
 from cxrp.contracts.execution_request import ExecutionRequest
 from cxrp.contracts.execution_result import Artifact, ExecutionResult
