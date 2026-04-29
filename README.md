@@ -55,9 +55,13 @@ ECP excludes implementation logic, including:
 
 ## Inter-system Relationship
 
-- OperatorConsole emits or captures `TaskProposal` and `ExecutionResult`-shaped data.
-- SwitchBoard consumes `TaskProposal` and emits `LaneDecision` only.
-- OperationsCenter consumes `TaskProposal` + `LaneDecision`, builds `ExecutionRequest`, and consumes `ExecutionResult`.
+- OperatorConsole emits or captures `TaskProposal` and `ExecutionResult`-shaped data via `operator_console.ecp_capture`.
+- SwitchBoard consumes `TaskProposal` and emits `LaneDecision` only; the wire shape is produced by `switchboard.adapters.ecp_mapper`.
+- OperationsCenter consumes `TaskProposal` + `LaneDecision`, builds `ExecutionRequest`, and consumes `ExecutionResult`. OC has its own internal Pydantic subtype with stricter narrowing — `operations_center.contracts.ecp_mapper` translates between OC's subtype and the ECP envelope at the boundary.
+
+### Subtype pattern
+
+ECP defines the **envelope**: identities, abstract `lane: LaneType` category, open-string `executor`/`backend`, free-form `input_payload` keyed by a lane-specific payload schema. Consumer repos (notably OC) layer their own typed `Literal`/Pydantic constraints internally without changing the wire contract. Cross-repo communication uses ECP shape; intra-repo code is free to use richer types as long as it maps to/from ECP at the wire.
 
 ## Versioning
 
