@@ -6,7 +6,7 @@ from typing import Any
 
 from jsonschema import Draft202012Validator
 
-SCHEMA_ROOT = Path(__file__).resolve().parents[2] / "schemas" / "v0.2"
+SCHEMA_ROOT = Path(__file__).resolve().parent.parent / "schemas" / "v0.2"
 
 SCHEMA_FILE_MAP = {
     "task_proposal": "task_proposal.schema.json",

@@ -43,13 +43,13 @@ ECP excludes implementation logic, including:
 - `ecp/contracts/`: Python contract models.
 - `ecp/vocabulary/`: canonical enums (`status`, `lane`, `artifact`).
 - `ecp/validation/`: schema loading and validation helper.
-- `schemas/v0.2/`: JSON Schemas for the four canonical contracts.
+- `ecp/schemas/v0.2/`: JSON Schemas for the four canonical contracts (shipped inside the installable package).
   - `task_proposal.schema.json`
   - `lane_decision.schema.json`
   - `execution_request.schema.json`
   - `execution_result.schema.json`
   - `payloads/`: per-lane payload schemas (e.g. `coding_agent_input.schema.json`).
-- `schemas/v0.1/`: frozen prior revision, retained for historical interop.
+- `ecp/schemas/v0.1/`: frozen prior revision, retained for historical interop.
 - `examples/v0.2/`: minimal interoperable examples.
 - `docs/spec/v0.2.md`: versioned normative summary.
 
@@ -61,4 +61,4 @@ ECP excludes implementation logic, including:
 
 ## Versioning
 
-All contracts include `schema_version = "0.2"` and `contract_kind` as canonical discriminators. v0.1 is frozen; breaking changes land under a new `schemas/vX.Y/`.
+All contracts include `schema_version = "0.2"` and `contract_kind` as canonical discriminators. v0.1 is frozen; breaking changes land under a new `ecp/schemas/vX.Y/`.

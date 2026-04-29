@@ -4,12 +4,18 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "execution-contract-protocol"
-version = "0.1.0"
+version = "0.2.0"
 description = "Contract-only specification models for ECP"
 requires-python = ">=3.11"
 dependencies = [
   "jsonschema>=4.0.0"
 ]
+
+[tool.setuptools.packages.find]
+include = ["ecp*"]
+
+[tool.setuptools.package-data]
+"ecp.schemas" = ["**/*.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
