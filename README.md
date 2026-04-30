@@ -79,3 +79,7 @@ Contract kinds and schema filenames are **stable** across versions:
 ```
 task_proposal       lane_decision       execution_request       execution_result
 ```
+
+## License
+
+Apache License 2.0 (Apache-2.0) — see [LICENSE](LICENSE).
