@@ -10,3 +10,9 @@ dist/
 # Local operator console state and AI agent context
 .console/
 CLAUDE.md
+
+# Custodian plugin directory (generated/managed by OpsCenter in managed repos)
+_custodian/
+
+# Warehouse data (generated artifacts gitignored via .warehouse/yard/*/.gitignore)
+.warehouse/yard/
