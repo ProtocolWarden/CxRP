@@ -8,7 +8,11 @@ dist/
 .pytest_cache/
 
 # Local operator console state and AI agent context
-.console/
+.console/*
+!.console/task.md
+!.console/backlog.md
+!.console/guidelines.md
+!.console/log.md
 CLAUDE.md
 
 # Custodian plugin directory (generated/managed by OpsCenter in managed repos)
