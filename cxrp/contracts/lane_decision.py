@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from cxrp.contracts.common import BaseContract
+from cxrp.contracts.execution_target import ExecutionTargetEnvelope
 from cxrp.vocabulary.lane import LaneType
 
 
@@ -33,6 +34,11 @@ class LaneDecision(BaseContract):
     rationale: str = ""
     confidence: float = 1.0
     alternatives: list[LaneAlternative] = field(default_factory=list)
+    # Phase 2 — named ExecutionTarget grouping. Additive; producers
+    # may emit either the scattered fields (executor/backend/lane) OR
+    # the envelope. Consumers should prefer execution_target when both
+    # are present. See docs/spec/execution_target.md.
+    execution_target: Optional[ExecutionTargetEnvelope] = None
 
     def __post_init__(self) -> None:
         if not 0.0 <= self.confidence <= 1.0:

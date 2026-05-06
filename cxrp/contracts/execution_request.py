@@ -6,6 +6,7 @@ from dataclasses import dataclass, field
 from typing import Any, Optional
 
 from cxrp.contracts.common import BaseContract, ExecutionLimits
+from cxrp.contracts.execution_target import ExecutionTargetEnvelope
 from cxrp.contracts.runtime_binding import RuntimeBinding
 from cxrp.vocabulary.lane import LaneType
 
@@ -25,3 +26,6 @@ class ExecutionRequest(BaseContract):
     constraints: list[str] = field(default_factory=list)
     limits: Optional[ExecutionLimits] = None
     runtime_binding: Optional[RuntimeBinding] = None
+    # Phase 2 — named ExecutionTarget grouping. Additive; takes
+    # precedence over scattered fields when both are present.
+    execution_target: Optional[ExecutionTargetEnvelope] = None

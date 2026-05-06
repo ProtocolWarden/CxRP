@@ -29,6 +29,17 @@
         },
         "additionalProperties": false
       }
+    },
+    "execution_target": {
+      "type": ["object", "null"],
+      "properties": {
+        "lane": {"type": "string", "enum": ["coding_agent", "review_agent", "local_model", "hosted_model", "aider_local"]},
+        "backend": {"type": ["string", "null"]},
+        "executor": {"type": ["string", "null"]},
+        "runtime_binding": {"type": ["object", "null"]}
+      },
+      "required": ["lane"],
+      "additionalProperties": false
     }
   },
   "additionalProperties": false

@@ -44,6 +44,17 @@
       },
       "required": ["kind", "selection_mode"],
       "additionalProperties": false
+    },
+    "execution_target": {
+      "type": ["object", "null"],
+      "properties": {
+        "lane": {"type": "string"},
+        "backend": {"type": ["string", "null"]},
+        "executor": {"type": ["string", "null"]},
+        "runtime_binding": {"type": ["object", "null"]}
+      },
+      "required": ["lane"],
+      "additionalProperties": false
     }
   },
   "additionalProperties": false

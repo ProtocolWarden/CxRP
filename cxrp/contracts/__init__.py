@@ -4,6 +4,7 @@ from cxrp.contracts.common import ExecutionLimits
 from cxrp.contracts.evidence import Evidence
 from cxrp.contracts.execution_request import ExecutionRequest
 from cxrp.contracts.execution_result import Artifact, ExecutionResult
+from cxrp.contracts.execution_target import ExecutionTargetEnvelope
 from cxrp.contracts.lane_decision import LaneAlternative, LaneDecision
 from cxrp.contracts.runtime_binding import RuntimeBinding
 from cxrp.contracts.task_proposal import TaskProposal
@@ -14,6 +15,7 @@ __all__ = [
     "ExecutionLimits",
     "ExecutionRequest",
     "ExecutionResult",
+    "ExecutionTargetEnvelope",
     "LaneAlternative",
     "LaneDecision",
     "RuntimeBinding",
