@@ -1,4 +1,4 @@
-# CxRP — Contract × Request Protocol
+# CxRP — Contract eXecution Routing Protocol
 
 > CxRP is a contract-only protocol for defining and executing structured work — describing AI/workflow request lifecycles across planning, lane selection, execution requests, and execution results.
 
