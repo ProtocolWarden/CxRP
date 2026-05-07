@@ -5,6 +5,8 @@ _Not a task tracker — that's backlog.md. Keep entries concise and dated._
 
 ## Stop Points
 
+- integrations/ docs refreshed (2026-05-07, on `main`): The three thin (5-line) integration stubs were rewritten with concrete details: which contracts cross which boundary, how each consumer uses them, schema_version pinning, and links to relevant consumer-side docs. operations_center.md now describes the cxrp_mapper.py bridge between OC's internal Pydantic mirror and canonical CxRP types. switchboard.md clarifies that RoutingPlan is SB-specific (not a CxRP type). operator_console.md explains the read-only file-based indirection (no Python coupling).
+
 - docs/README.md index added (2026-05-07, on `main`): Required by Custodian R6 (newly landed). Indexes spec/ (v0.1, v0.2, execution_target), architecture/ (boundary_rules, compatibility, lifecycle), and integrations/ (operations_center, operator_console, switchboard).
 
 - pyproject description had wrong protocol expansion (2026-05-06, on `main`): pyproject.toml said "Contract × Request Protocol" but every other surface (README, GitHub description, internal docs) uses "Contract eXecution Routing Protocol". Fixed for consistency on PyPI metadata.
