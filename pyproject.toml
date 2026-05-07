@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "cxrp"
 version = "0.2.0"
-description = "CxRP — Contract × Request Protocol for execution-bound workflows. Contract-only models, schemas, and vocabulary."
+description = "CxRP — Contract eXecution Routing Protocol for execution-bound workflows. Contract-only models, schemas, and vocabulary."
 requires-python = ">=3.11"
 dependencies = [
   "jsonschema>=4.0.0"
