@@ -5,6 +5,8 @@ _Not a task tracker — that's backlog.md. Keep entries concise and dated._
 
 ## Stop Points
 
+- Wire Custodian B1 privacy block (2026-05-08, on `chore/wire-b1-privacy-block`): Added top-level `privacy:` block to `.custodian/config.yaml` listing `VideoFoundry` and `videofoundry` as banned literals. B1 reports zero leaks on the public surface — defaults exclude operator-private workspaces, history docs, and the config file itself, so the block is purely declarative for now and acts as a forward guard against future leaks.
+
 - integrations/ docs refreshed (2026-05-07, on `main`): The three thin (5-line) integration stubs were rewritten with concrete details: which contracts cross which boundary, how each consumer uses them, schema_version pinning, and links to relevant consumer-side docs. operations_center.md now describes the cxrp_mapper.py bridge between OC's internal Pydantic mirror and canonical CxRP types. switchboard.md clarifies that RoutingPlan is SB-specific (not a CxRP type). operator_console.md explains the read-only file-based indirection (no Python coupling).
 
 - docs/README.md index added (2026-05-07, on `main`): Required by Custodian R6 (newly landed). Indexes spec/ (v0.1, v0.2, execution_target), architecture/ (boundary_rules, compatibility, lifecycle), and integrations/ (operations_center, operator_console, switchboard).
@@ -25,6 +27,8 @@ _Not a task tracker — that's backlog.md. Keep entries concise and dated._
 | C16 encoding fix in json_schema.py | 2× schema_path.read_text() missing encoding= keyword; Custodian C16 finding resolved | 2026-05-02 |
 
 ## Stop Points
+
+- Wire Custodian B1 privacy block (2026-05-08, on `chore/wire-b1-privacy-block`): Added top-level `privacy:` block to `.custodian/config.yaml` listing `VideoFoundry` and `videofoundry` as banned literals. B1 reports zero leaks on the public surface — defaults exclude operator-private workspaces, history docs, and the config file itself, so the block is purely declarative for now and acts as a forward guard against future leaks.
 
 _(none)_
 
