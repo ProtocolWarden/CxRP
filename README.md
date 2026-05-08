@@ -30,6 +30,26 @@ CxRP excludes implementation logic, including:
 - queue systems
 - transport machinery (gRPC, FastAPI, Temporal, etc.)
 
+## Quick start
+
+Install via pip from the repo root:
+
+```bash
+pip install -e .
+```
+
+Use the contract models in your own code:
+
+```python
+from cxrp.contracts import TaskProposal, LaneDecision, ExecutionRequest, ExecutionResult
+```
+
+JSON Schemas live under `cxrp/schemas/` for non-Python consumers.
+
+## Architecture
+
+CxRP is a contract layer — four versioned Pydantic models plus their canonical vocabulary enums and JSON Schemas. The **Repository Layout** section below maps which directory holds each surface (`cxrp/contracts/`, `cxrp/schemas/`, `cxrp/examples/`). Consumers (OperatorConsole, SwitchBoard, OperationsCenter) import the models verbatim and never mutate them — version bumps follow the **Contract Evolution Policy** later in this file.
+
 ## Status
 
 Current revision: **v0.2** (active). Frozen prior revision: **v0.1** (retained on disk for historical interop).
