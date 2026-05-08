@@ -7,6 +7,9 @@ tests_root: tests
 # `_custodian/` overlay layer (see OperationsCenter for a worked example).
 
 audit:
+  cross_repo:
+    platform_manifest_repo: ../PlatformManifest
+
   # K1 suppressions: `claude_cli` appears in README as an example string ("e.g. `claude_cli`")
   # within an executor enumeration context — not a Python function reference.
   common_words:

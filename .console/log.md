@@ -28,6 +28,8 @@ _Not a task tracker — that's backlog.md. Keep entries concise and dated._
 
 ## Stop Points
 
+- Wire cross_repo config (2026-05-08, on chore/wire-cross-repo-config): Added `audit.cross_repo.platform_manifest_repo: ../PlatformManifest` to `.custodian/config.yaml`. Enables X1/X2/X3 detectors; live run shows 0 findings.
+
 - Wire Custodian B1 privacy block (2026-05-08, on `chore/wire-b1-privacy-block`): Added top-level `privacy:` block to `.custodian/config.yaml` listing `VideoFoundry` and `videofoundry` as banned literals. B1 reports zero leaks on the public surface — defaults exclude operator-private workspaces, history docs, and the config file itself, so the block is purely declarative for now and acts as a forward guard against future leaks.
 
 _(none)_
