@@ -37,3 +37,7 @@ _(none)_
 _Free-form scratch. Clear periodically._
 
 - DC4 README sections (2026-05-08, on `fix/dc4-readme-sections`): Custodian DC4 promoted to native flagged the README missing both Quick start and Architecture H2s. Added a Quick start section (pip install + import example) and an Architecture section that frames CxRP as a contract layer pointing at Repository Layout for the directory map.
+
+## 2026-05-08 — M1: CHANGELOG.md stub (Keep-a-Changelog format)
+
+Added a minimal CHANGELOG.md so M1 (and M5 format check) pass.
