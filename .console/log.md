@@ -41,3 +41,6 @@ _Free-form scratch. Clear periodically._
 ## 2026-05-08 — M1: CHANGELOG.md stub (Keep-a-Changelog format)
 
 Added a minimal CHANGELOG.md so M1 (and M5 format check) pass.
+
+## 2026-05-08 — Custodian round: CxRP clean (25 → 0)
+

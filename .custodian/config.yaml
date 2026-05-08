@@ -31,10 +31,24 @@ audit:
       # validate_contract() / validate_payload() return None and raise ValidationError
       # on failure — "should not raise" tests are correctly assertion-free.
       - tests/test_contracts.py
+      - tests/test_evidence.py
+      - tests/test_execution_target.py
+      - tests/test_runtime_binding.py
     T1:
       # BaseContract is an abstract base serialized via asdict() — it is always
       # used through its concrete subclasses, never instantiated directly in tests.
       - cxrp/contracts/common.py
+    T6:
+      # Contract dataclasses are validated through schema-comparison tests,
+      # not by direct import — the test suite uses the contract names but not
+      # the source modules.
+      - "cxrp/contracts/**"
+      - "cxrp/validation/**"
+      - "cxrp/vocabulary/**"
+    T7:
+      - "cxrp/contracts/**"
+      - "cxrp/validation/**"
+      - "cxrp/vocabulary/**"
 
 
 tools:
