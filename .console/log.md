@@ -3,6 +3,13 @@
 _Chronological continuity log. Decisions, stop points, what changed and why._
 _Not a task tracker — that's backlog.md. Keep entries concise and dated._
 
+## 2026-05-09 — fix(vocabulary): AgentTopology spec-compliance (campaign 10c50210)
+
+Replaced kodo's non-compliant `agent.py` (wrong filename, 5 wrong members, kodo artifacts)
+with spec-mandated `agent_topology.py` (4 members per ADR 0002 G1). Added naming-guardrail
+tests, version bump 0.2.0→0.3.0, CHANGELOG [0.3.0] entry. Branch: `goal/efe0d3f9`.
+Fix applied by OC watchdog loop operator cycle after review bot escalated to human.
+
 ## Stop Points
 
 - Wire Custodian B1 privacy block (2026-05-08, on `chore/wire-b1-privacy-block`): Added top-level `privacy:` block to `.custodian/config.yaml` listing `VideoFoundry` and `videofoundry` as banned literals. B1 reports zero leaks on the public surface — defaults exclude operator-private workspaces, history docs, and the config file itself, so the block is purely declarative for now and acts as a forward guard against future leaks.

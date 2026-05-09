@@ -1,9 +1,0 @@
-{
-  "team": "full",
-  "orchestrator": "claude-code",
-  "orchestrator_model": "sonnet",
-  "max_exchanges": 20,
-  "max_cycles": 3,
-  "auto_commit": true,
-  "effort": "standard"
-}
